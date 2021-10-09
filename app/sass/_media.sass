@@ -1,0 +1,155 @@
+@import "vars"
+
+/*==========	Desktop First	==========*/
+
+// ≥1200px
+@media (max-width : 1200px)
+	//
+
+// ≥992px
+@media (max-width : 992px)
+	.hero
+		margin-top: 75px
+	.mobile-menu
+		position: fixed
+		top: 0
+		left: 0
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		height: 75px
+		background: $white
+		transition: all .5s ease
+		z-index: 9
+		.logo
+			@include col
+	.header
+		transition: all .2s ease
+		position: fixed
+		top: 65px
+		width: 100%
+		padding-top: 40px
+		right: -100%
+		text-align: center
+		margin: 0
+		overflow: hidden
+		overflow-y: scroll
+		height: calc(100vh - 65px)
+		z-index: 2
+		background-color: $white
+		&_active
+			transform: translate3d(-100%,0,0)
+			.row
+				flex-direction: column
+		&__logo
+			display: none
+
+	.menu
+		ul
+			flex-direction: column
+		li
+			margin-right: 0
+			margin-bottom: 10px
+
+	.block
+		justify-content: center
+
+	.experts__info
+		max-width: 100%
+		margin-bottom: 20px
+
+@media (max-width : 870px)
+	.hero
+		&__item
+			min-height: 550px
+			background-size: 280px
+			background-position: top center
+			&::after
+				content: none
+		&__info
+			top: 200px
+			transform: none
+			max-width: 550px
+			left: 0
+			right: 0
+			margin: 0 auto
+			background-color: #9bb2f4
+			border-radius: 50px 10px
+			padding: 30px
+			p
+				color: $white
+
+@media (max-width : 768px)
+	.application
+		&__block
+			justify-content: center
+		&__img
+			margin-bottom: 20px
+		&__info
+			max-width: 100%
+
+// ≥576px
+@media (max-width : 540px)
+	.counter
+		flex-direction: column
+	.block__item
+		margin-right: 0
+	.hero
+		&__info
+			h2
+				font-size: 32px
+				line-height: 30px
+
+//: ≥480px
+@media (max-width : 480px)
+	.application
+		&__img
+			background-image: none
+			padding: 0
+		&__info
+			h2
+				font-size: 32px
+				line-height: 30px
+	.experts__info
+		h2
+			font-size: 32px
+			line-height: 30px
+	.healthcare__title
+		h2
+			font-size: 32px
+			line-height: 37px
+
+//: ≥380px
+@media (max-width : 400px)
+	.healthcare__links
+		flex-direction: column
+		a
+			&:first-child
+				margin-right: 0
+
+/*==========	Mobile First	==========*/
+
+//Extra small
+@media (min-width : 320px)
+	//
+
+//Small
+@media (min-width : 480px)
+	//
+
+//Bigger
+@media (min-width : 768px)
+	//
+
+//Medium
+@media (min-width : 992px)
+	//
+
+//Large
+@media (min-width : 1200px)
+	//
+
+// Retina
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+	//
